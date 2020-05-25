@@ -1,0 +1,81 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,700');
+@import 'type-colors';
+@import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
+
+// Font Variables
+$mukta: 'Mukta Malar', sans-serif;
+
+@each $colors, $type in $colors {
+  .bg-#{$colors} {
+    background-color: $type !important;
+  }
+}
+
+html {
+  font-family: $mukta;
+}
+
+.v-text-field > .v-input__control > .v-input__slot:after {
+  border-color: map-get($colors, fire);
+}
+
+.type-label {
+  background-color: grey;
+  min-width: 88px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  padding: 2px;
+  margin: 0 0 0 8px;
+}
+
+.type-label-blank {
+  background-color: transparent;
+  min-width: 88px;
+  padding: 2px;
+  margin: 0 0 0 8px;
+}
+
+@media screen and (max-width: 496px) {
+  .type-label,
+  .type-label-blank {
+    min-width: 56px;
+    font-size: 12px;
+    padding: 0;
+  }
+}
+
+// Vuetify Override
+// .v-dialog__content {
+//   background-color: rgba(0,0,0,.65);
+// }
+
+/* during entering and leaving : */
+.page-enter-active,
+.page-leave-active {
+  position: absolute;
+  max-width: 725.328px; /*make sur our content keep it's original width*/
+  transition: all 0.2s ease;
+}
+
+/* entering start */
+.page-enter {
+  left: -100%;
+}
+
+/* entering end */
+.page-enter-to {
+  left: 0;
+}
+
+/* leaving start */
+.page-leave {
+  opacity: 1;
+}
+
+/* leaving end */
+.page-leave-to {
+  opacity: 0;
+}
