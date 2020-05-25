@@ -1,7 +1,7 @@
 <template>
   <v-list-item v-if="pokemon" @click="navigate">
     <v-list-item-avatar tile :size="80">
-      <v-img :src="pokemon.sprite" />
+      <v-img :src="pokemon.sprite" :alt="pokemon.name" />
     </v-list-item-avatar>
 
     <v-list-item-content>
@@ -16,9 +16,9 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
-import { Pokedex, Pokemon } from '../libs/pokedex/Pokedex'
+import { Pokedex, Pokemon } from '~/libs/pokedex/Pokedex'
 import { capitalize } from '~/filters/StringFilters'
-import TypeChip from './TypeChip.vue'
+import TypeChip from '~/components/TypeChip.vue'
 
 @Component({
   filters: {

@@ -18,5 +18,6 @@ module.exports = {
     '<rootDir>/filters/**/*.ts'
   ],
   setupFilesAfterEnv: ['<rootDir>/tests/setup.js'],
-  transformIgnorePatterns: ['node_modules/(?!(@nuxt/vuetify))']
+  transformIgnorePatterns: ['node_modules/(?!(@nuxt/vuetify))'],
+  testEnvironment: 'jest-environment-jsdom-sixteen'
 }

@@ -5,6 +5,7 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
 import { capitalize } from '~/filters/StringFilters'
+import { Types } from '~/types/PokemonTypes'
 
 @Component({
   filters: {
@@ -13,7 +14,7 @@ import { capitalize } from '~/filters/StringFilters'
 })
 export default class TypeChip extends Vue {
   @Prop({ required: true })
-  readonly type!: string
+  readonly type!: Types
 
   get chipClass(): Record<string, boolean> {
     return {

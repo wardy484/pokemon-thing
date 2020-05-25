@@ -1,7 +1,5 @@
 import * as TestingLibrary from '@testing-library/vue'
 import Vuetify from 'vuetify'
-import VueRouter from 'vue-router'
-// import { createLocalVue } from 'vue-test-utils'
 
 export function render(component, options, callback) {
   const root = document.createElement('div')
