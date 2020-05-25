@@ -10,12 +10,14 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "test-watch": "jest --watchAll"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.10.3",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "@types/jest": "^25.2.3",
     "nuxt": "^2.12.2",
     "nuxt-property-decorator": "^2.7.2",
     "pokeapi-typescript": "^2.0.1",
@@ -31,6 +33,7 @@
     "@nuxtjs/eslint-module": "^1.2.0",
     "@nuxtjs/svg": "^0.1.11",
     "@nuxtjs/vuetify": "^1.11.2",
+    "@testing-library/jest-dom": "^5.8.0",
     "@testing-library/vue": "^5.0.3",
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
