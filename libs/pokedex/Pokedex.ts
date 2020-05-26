@@ -1,5 +1,4 @@
 import PokedexPromise from 'pokedex-promise-v2'
-
 const pokedex = new PokedexPromise()
 
 export interface Pokemon {
@@ -12,7 +11,7 @@ export interface Pokemon {
 }
 
 class PokedexClient {
-  async getAll(limit: number = 151): Promise<string[]> {
+  async getAll(limit: number = 152): Promise<string[]> {
     const { results } = await pokedex.getPokemonsList({
       limit: Math.max(limit - 1, 0) // 0 index pokemon numbers /shurg
     })
@@ -28,7 +27,6 @@ class PokedexClient {
       name: pokemon.name,
       height: pokemon.height,
       weight: pokemon.weight,
-      // sprite: pokemon.sprites.front_default,
       sprite: `https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`,
       types: pokemon.types.map(({ type }) => type.name)
     }

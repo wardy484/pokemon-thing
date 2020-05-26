@@ -31,11 +31,11 @@ declare interface PokemonResult {
   is_default: boolean
   order: number
   weight: number
-  abilities: {
-    is_hidden: boolean
-    slot: number
-    ability: ResourceDetails
-  }[]
+  // abilities: {
+  //   is_hidden: boolean
+  //   slot: number
+  //   ability: ResourceDetails
+  // }[]
   sprites: {
     back_female: string
     back_shiny_female: string

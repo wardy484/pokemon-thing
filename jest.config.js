@@ -15,7 +15,8 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/components/**/*.vue',
     '<rootDir>/pages/**/*.vue',
-    '<rootDir>/filters/**/*.ts'
+    '<rootDir>/filters/**/*.ts',
+    '<rootDir>/libs/**/*.ts'
   ],
   setupFilesAfterEnv: ['<rootDir>/tests/setup.js'],
   transformIgnorePatterns: ['node_modules/(?!(@nuxt/vuetify))'],
