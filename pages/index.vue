@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
+import { Vue, Component } from 'vue-property-decorator'
 import { Pokedex } from '~/libs/pokedex/Pokedex'
 import PokemonListItem from '~/components/PokemonListItem.vue'
 
@@ -23,11 +23,8 @@ import PokemonListItem from '~/components/PokemonListItem.vue'
 export default class Index extends Vue {
   pokemons: string[] = []
 
-  activeItems: Record<string, boolean> = {}
-
   async created() {
     this.pokemons = await Pokedex.getAll(151)
   }
 }
 </script>
-

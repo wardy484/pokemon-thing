@@ -1,14 +1,9 @@
 import flushPromises from 'flush-promises'
 import { ComponentHarness, fireEvent } from '@testing-library/vue'
-import { mocked } from 'ts-jest/utils'
-
-import { Charmander } from '~/tests/Fixtures/Pokemon'
 import PokemonListItem from '~/components/PokemonListItem.vue'
 import { render } from '~/tests/VuetifyRender'
-import { Pokedex } from '~/libs/pokedex/Pokedex'
 
 jest.mock('~/libs/pokedex/Pokedex')
-const mockedPokedex = mocked(Pokedex, true)
 
 describe('PokemonListItem.vue', () => {
   test('Pokemon is not shown before it is loaded', () => {
@@ -28,8 +23,6 @@ describe('PokemonListItem.vue', () => {
     }
 
     beforeEach(async () => {
-      mockedPokedex.getByName.mockImplementation(async () => await Charmander)
-
       wrapper = render(PokemonListItem, {
         propsData: {
           name: 'charmander'

@@ -17,3 +17,12 @@ export const Pidgey: Pokemon = {
   sprite: 'https://pokeres.bastionbot.org/images/pokemon/16.png',
   types: ['flying', 'normal']
 }
+
+export const EmptyPokemon: Pokemon = {
+  id: 0,
+  name: '',
+  height: 0,
+  weight: 0,
+  sprite: '',
+  types: []
+}

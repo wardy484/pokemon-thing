@@ -1,6 +1,6 @@
+import { RouterLinkStub } from '@vue/test-utils'
 import { render } from '~/tests/VuetifyRender'
 import PokemonBreadcrumbs from '~/components/PokemonBreadcrumbs.vue'
-import { RouterLinkStub } from '@vue/test-utils'
 
 describe('PokemonBreadcrumbs.vue', () => {
   test('nothing is provided and the root level breadcrumb is visible', async () => {
