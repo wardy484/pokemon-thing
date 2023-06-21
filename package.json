@@ -20,7 +20,7 @@
     "@types/jest": "^25.2.3",
     "jest-each": "^26.0.1",
     "jest-environment-jsdom-sixteen": "^1.0.3",
-    "nuxt": "^2.12.2",
+    "nuxt": "^3.4.3",
     "nuxt-property-decorator": "^2.7.2",
     "pokeapi-typescript": "^2.0.1",
     "pokedex-promise-v2": "^3.2.0",
